@@ -392,34 +392,27 @@ h6 {
 }
 
 .main__parts {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-grid-columns: (167px)[6];
-  grid-template-columns: repeat(6, 167px);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .main__part {
-  -ms-grid-column-span: 2;
-  grid-column: span 2;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: subgrid;
-  grid-template-rows: subgrid;
-  grid-row: auto/span 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 27.973199%;
-          flex: 0 0 27.973199%;
-  /* 334/1194 */
-  -ms-flex: 0 0 334px;
-      flex: 0 0 334px;
+      -ms-flex: 0 0 334px;
+          flex: 0 0 334px;
   overflow: hidden;
   padding: 2.5rem 3.75rem 1.75rem 3.75rem;
   border-radius: 11px;
@@ -544,6 +537,10 @@ h6 {
   margin-bottom: 1.5rem;
 }
 
+.part__list:not(:last-child) {
+  margin-bottom: 1.125rem;
+}
+
 .part__item {
   position: relative;
   background: url("../img/punct.svg") 0 center no-repeat;
@@ -561,7 +558,7 @@ h6 {
 }
 
 .part__button {
-  margin-top: 1.125rem;
+  margin-top: auto;
 }
 
 .cost-part__currency {
@@ -631,8 +628,6 @@ h6 {
 
 @media (max-width: 62.5em) {
   .main__parts {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.25rem;
   }
 
@@ -768,16 +763,6 @@ h6 {
     display: none;
   }
 
-  .main__parts {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .main__part {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   .main__part_03 {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
@@ -798,6 +783,14 @@ h6 {
 
   .header__logo {
     margin-right: 1.25rem;
+  }
+
+  .main__part {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
