@@ -490,9 +490,9 @@ h6 {
 }
 
 .part__cost {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   padding-bottom: 0.9375rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
